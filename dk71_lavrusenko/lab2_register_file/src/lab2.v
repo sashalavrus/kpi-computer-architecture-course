@@ -3,17 +3,7 @@
 // VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 // CREATED		"Sun Sep 15 14:09:17 2019"
 
-module lab2(
-	we,
-	arst,
-	clk,
-	data,
-	RA,
-	RB,
-	RW,
-	OUTA,
-	OUTB
-);
+module lab2(we,	arst, clk, data, RA, RB, RW, OUTA, OUTB);
 
 
 input wire	we;
@@ -128,8 +118,6 @@ wire	SYNTHESIZED_WIRE_130;
 
 assign	SYNTHESIZED_WIRE_125 = 0;
 assign	SYNTHESIZED_WIRE_126 = 0;
-
-
 
 
 register	b2v_inst(
@@ -390,6 +378,7 @@ register	b2v_inst4(
 	.o_q(SYNTHESIZED_WIRE_157));
 	defparam	b2v_inst4.WIDTH = 32;
 
+
 assign	SYNTHESIZED_WIRE_16 = we & SYNTHESIZED_WIRE_35;
 
 assign	SYNTHESIZED_WIRE_15 = we & SYNTHESIZED_WIRE_36;
@@ -447,6 +436,7 @@ register	b2v_inst6(
 	.i_d(data),
 	.o_q(SYNTHESIZED_WIRE_159));
 	defparam	b2v_inst6.WIDTH = 32;
+
 
 assign	SYNTHESIZED_WIRE_23 = we & SYNTHESIZED_WIRE_57;
 
@@ -572,8 +562,6 @@ lpm_mux_r0	b2v_inst67(
 	.data0x(SYNTHESIZED_WIRE_126),
 	.data1x(SYNTHESIZED_WIRE_127),
 	.result(SYNTHESIZED_WIRE_131));
-
-
 
 
 register	b2v_inst7(
