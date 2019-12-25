@@ -1,0 +1,14 @@
+`timescale 1ns/1ps 
+
+module instruction_memory(addr, instr_out);
+
+input [31:0] addr;
+output [31:0] instruction;
+
+reg [31:0] instruction_mem [255:0];
+
+assign instruction = instruction_mem[addr];
+
+initial $readmemb("/home/laviss/mips_core/instruction.instr", instruction_mem);
+
+endmodule

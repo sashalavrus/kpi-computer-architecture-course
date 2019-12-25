@@ -1,0 +1,9 @@
+module arlam (i_arlam_time, clock_time, clk, arlm_en, o_arlm_int, arst_n);
+
+input [31:0] i_arlam_time;
+input  clk;
+input arlm_en;
+input arst_n;
+input [31:0] clock_time;
+output o_arlm_int;
+

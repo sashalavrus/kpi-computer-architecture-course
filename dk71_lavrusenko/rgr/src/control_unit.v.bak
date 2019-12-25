@@ -1,0 +1,43 @@
+
+`define R 6'b000000
+`define ADD_I 6'b001000
+`define SLT_I 6'b001010
+`define LW 6'b100011
+`define SW 6'b101011
+`define BEQ 6'b000010
+`define BNE 6'b000101
+`J 6'b000010
+
+
+
+
+
+module control_unit(i_op, i_funct, i_amount, o_control_sig, o_alu_control, o_shift_contr );
+
+input [5:0]i_op;
+input [6:0]i_funct;
+input [5:0]i_amount;
+
+output reg[9:0] o_control_sig;
+output reg[6:0] o_alu_control;
+output reg[5:0] o_shift_contr 
+
+
+assign 
+
+always @* begin
+
+	casez(i_op)
+			R : begin
+			o_control_sig = 10'b1100000000;
+			o_alu_control = i_funct;
+			o_shift_contr = i_amount;
+			
+		 ADD_I : o_control_sig = 10'b0000010100;
+		 SLT_I : o_control_sig = 10'b
+		 LW : o_control_sig;
+		 SW : o_control_sig;
+		 BEQ : o_control_sig;
+		 BNE : o_control_sig;
+		 J : o_control_sig;
+	
